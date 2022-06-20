@@ -38,9 +38,10 @@ a {
 }
 /*header*/
 .header {
-  background-color: var(--color-1);
+  background-color: transparent;
   padding: 12px 0;
   line-height: 1.5;
+  position: relative;
 }
 
 .header .logo,
@@ -156,12 +157,11 @@ a {
   background: #efefef url(../asset/img/1.jpg);
   background-size: cover;
   background-position: center center;
-  background-repeat: no-repeat;
+
   text-align: center;
   color: white;
   position: relative;
-  height: 750px;
-  position: relative;
+  height: 850px;
 }
 
 .overlay {
@@ -349,7 +349,7 @@ a {
 }
 
 .blog {
-  padding-top: 144px;
+  padding-top: 90px;
   padding-bottom: 128px;
   background-color: #f1f5f9;
 }
@@ -559,4 +559,209 @@ a {
 
 .susun-nama:hover {
   color: var(--title-color);
+}
+
+/* isi Blog */
+.header-blog-isi {
+  background-color: var(--color-1);
+  padding: 12px 0;
+  line-height: 1.5;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.header-blog-isi .logo,
+.header .nav {
+  padding: 0 15px;
+}
+
+.header-blog-isi .logo {
+  font-family: "Ubuntu", sans-serif;
+}
+.header-blog-isi .logo a {
+  font-size: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.header-blog-isi .logo a span {
+  color: #1363df;
+  font-weight: bold;
+}
+
+.header-blog-isi .nav ul li {
+  display: inline-block;
+}
+.header-blog-isi .nav ul li a {
+  display: block;
+  font-size: 18px;
+  text-transform: capitalize;
+  color: #ffffff;
+  padding: 0 15px;
+  transition: all 0.5s ease;
+}
+.header-blog-isi .nav ul li a.active,
+.header-blog-isi .nav ul li a:hover {
+  color: var(--color-1);
+  background-color: #fff;
+}
+
+.container-blog-isi-judul {
+  width: 100%;
+  padding: 80px 50px 70px 0;
+  margin: 0 auto;
+  display: flex;
+  flew-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.judul-blog-isi {
+  font-size: 50px;
+  font-weight: 700;
+  display: block;
+  color: #171717;
+}
+
+.author-card {
+  height: 80px;
+  width: 100%;
+  padding: 0 0 20px 230px;
+  display: flex;
+  justify-content: start;
+  margin: 0 0 0 120px;
+}
+
+.ava-blog-isi {
+  height: 60px;
+  width: 60px;
+  min-height: auto;
+  max-width: 100%;
+  min-width: auto;
+  align-self: center;
+}
+
+.isi-card {
+  height: 60px;
+  width: 300px;
+  min-height: auto;
+  min-width: auto;
+  display: block;
+  text-align: left;
+}
+
+.isi-card a {
+  display: inline;
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
+  padding: 7px 0 0 15px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--title-color);
+}
+
+.isi-card p {
+  padding: 7px 15px;
+  justify-content: center;
+  color: var(--text-color);
+}
+
+.sampul-blog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-height: 800px;
+  max-width: 100%;
+}
+.sampul-blog img {
+  margin: 40px 0 0 0;
+  height: 500px;
+  width: 800px;
+  justify-content: center;
+  object-fit: cover;
+}
+
+.post-full-content {
+  padding: 80px 0 120px 0;
+  margin: 0 auto;
+  width: 800px;
+}
+
+.post-content-blog p {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  padding: 0 0 20px 0;
+  line-height: 30px;
+}
+
+.post-content-blog h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--title-color);
+  margin-bottom: 25px;
+  padding-top: 20px;
+}
+
+.post-content-blog a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.post-content-blog h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 25px;
+  padding-top: 20px;
+}
+
+.img-content-blog {
+  height: 500px;
+  width: 800px;
+  justify-content: center;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .header-blog-isi {
+    padding: 12px 0;
+  }
+  .header-blog-isi .logo a {
+    font-size: 18px;
+  }
+  .header-blog-isi .nav ul li a {
+    font-size: 16px;
+  }
+  .container-blog-isi-judul {
+    padding: 80px 20px 70px 0;
+  }
+  .judul-blog-isi {
+    font-size: 40px;
+  }
+  .author-card {
+    padding: 0 0 20px 20px;
+  }
+  .ava-blog-isi {
+    height: 40px;
+    width: 40px;
+  }
+  .post-content-blog p {
+    font-size: 18px;
+  }
+
+  .sampul-blog {
+    flex-direction: column;
+  }
+  .sampul-blog-img {
+    height: 400px;
+    width: 600px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
 }
